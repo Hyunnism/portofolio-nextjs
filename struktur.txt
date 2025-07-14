@@ -1,0 +1,63 @@
+portofolio-site/
+│
+├── public/                       # Aset publik (favicon, gambar statis lokal)
+│   └── images/                   # Logo, icon statis
+│
+├── server/                       # (Opsional) Backend API tambahan via Next.js API Route atau Express
+│   ├── routes/                   # Endpoint custom (jika pakai server custom)
+│   └── index.js                  # Entry point (jika pakai Express – tidak wajib)
+│
+├── src/                          # Semua sumber frontend
+│   ├── assets/                   # Logo, ikon statis (selain dari ImageKit)
+│   ├── components/               # Komponen UI reusable
+│   │   ├── common/               # Navbar, Footer, Layout
+│   │   ├── home/
+│   │   ├── about/
+│   │   ├── skills/
+│   │   ├── experiences/
+│   │   ├── projects/
+│   │   ├── contact/
+│   │   └── admin/                # Komponen dashboard admin (form, tabel)
+│   ├── context/                  # Auth context (admin, public)
+│   ├── hooks/                    # Custom React Hooks
+│   │   ├── useAuth.ts
+│   │   ├── useSupabase.ts
+│   │   └── useImageUpload.ts
+│   ├── layouts/                  # Layout publik dan admin
+│   ├── lib/                      # Supabase & ImageKit client, fetcher, constants
+│   │   ├── supabaseClient.ts
+│   │   ├── imagekit.ts
+│   │   ├── fetcher.ts
+│   │   ├── auth.ts
+│   │   └── constants.ts
+│   ├── pages/                    # Routing Next.js
+│   │   ├── index.tsx             # Halaman Home
+│   │   ├── about.tsx
+│   │   ├── skills.tsx
+│   │   ├── experiences.tsx
+│   │   ├── projects.tsx
+│   │   ├── contact.tsx
+│   │   └── admin/                # Dashboard admin
+│   │       ├── index.tsx
+│   │       ├── home.tsx
+│   │       ├── about.tsx
+│   │       ├── skills.tsx
+│   │       ├── experiences.tsx
+│   │       ├── projects.tsx
+│   │       └── contact.tsx
+│   ├── routes/                   # Middleware dan proteksi route admin
+│   │   └── ProtectedRoute.ts
+│   ├── styles/                   # Tailwind config & global style
+│   │   ├── globals.css
+│   │   └── tailwind.config.ts
+│   └── app.tsx                   # Entry point jika pakai App Router (Next.js 13+)
+│
+├── supabase/                     # (opsional) Supabase CLI & fungsi edge
+│   ├── config.toml
+│   └── functions/
+│       └── example_edge_func.ts
+│
+├── .env.local                    # Env: Supabase & ImageKit key
+├── tailwind.config.ts
+├── tsconfig.json
+└── next.config.js

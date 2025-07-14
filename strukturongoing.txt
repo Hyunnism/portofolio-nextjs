@@ -1,0 +1,63 @@
+portofolio-site/
+│
+├── public/                       
+│   └── images/                   
+│
+├── server/                      
+│   ├── routes/                 
+│   └── index.js                
+│
+├── src/                         
+│   ├── assets/                   
+│   ├── components/               
+│   │   ├── common/               
+│   │   ├── home/
+│   │   ├── about/
+│   │   ├── skills/
+│   │   ├── experiences/
+│   │   ├── projects/
+│   │   ├── contact/
+│   │   └── admin/                
+│   ├── context/                 
+│   ├── hooks/                    
+│   │   ├── useAuth.ts
+│   │   ├── useSupabase.ts
+│   │   └── useImageUpload.ts
+│   ├── layouts/                  
+│   ├── lib/                      
+│   │   ├── supabaseClient.ts
+│   │   ├── imagekit.ts
+│   │   ├── fetcher.ts
+│   │   ├── auth.ts
+│   │   └── constants.ts
+│   ├── pages/                    
+│   │   ├── index.tsx             
+│   │   ├── about.tsx
+│   │   ├── skills.tsx
+│   │   ├── experiences.tsx
+│   │   ├── projects.tsx
+│   │   ├── contact.tsx
+│   │   └── admin/                
+│   │       ├── index.tsx
+│   │       ├── home.tsx
+│   │       ├── about.tsx
+│   │       ├── skills.tsx
+│   │       ├── experiences.tsx
+│   │       ├── projects.tsx
+│   │       └── contact.tsx
+│   ├── routes/                   
+│   │   └── ProtectedRoute.ts
+│   ├── styles/                   
+│   │   ├── globals.css
+│   │   └── tailwind.config.ts
+│   └── app.tsx                  
+│
+├── supabase/                     
+│   ├── config.toml
+│   └── functions/
+│       └── example_edge_func.ts
+│
+├── .env.local                   
+├── tailwind.config.ts
+├── tsconfig.json
+└── next.config.js
